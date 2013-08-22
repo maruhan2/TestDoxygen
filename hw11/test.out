@@ -1,0 +1,63 @@
+Test 1: OK    		(Basic HashSet test (using HashSet<size_t>))
+cout>	Testing HashSet, size = 4096
+cout>	Filling set...
+cout>	Searching...
+cout>	Done (0 assertion failures).
+
+Test 2: Failed		(Basic TreeSet test (using TreeSet<size_t>))
+cout>	Testing TreeSet, size = 4096
+cout>	Filling set...
+cout>	Searching...
+cout>	Final tree height too high (242).
+cout>	Done (0 assertion failures).
+- output differences (cout output)
+
+Test 3: OK    		(Basic StdTreeSet test (using StdTreeSet<size_t>))
+cout>	Testing StdTreeSet, size = 4096
+cout>	Filling set...
+cout>	Searching...
+cout>	Done (0 assertion failures).
+
+Test 4: OK    		(Basic StdHashSet test (using StdHashSet<size_t>))
+cout>	Testing StdHashSet, size = 4096
+cout>	Filling set...
+cout>	Searching...
+cout>	Done (0 assertion failures).
+Test 5: Skipped  		[./myspell not found]
+Test 6: Skipped  		[./myspell not found]
+Test 7: Skipped  		[./myspell not found]
+Test 8: Skipped  		[./myspell not found]
+Test 9: Skipped  		[./myspell not found]
+Test 10: Skipped  		[./myspell not found]
+Test 11: Skipped  		[./myspell not found]
+Test 12: Skipped  		[./myspell not found]
+
+Test 13: Failed		(TreeSet space leak test)
+cout>	Testing TreeSet, size = 32768, 10 rounds
+cout>	Filling set...
+cout>	Filling set...
+cout>	Filling set...
+	[ ... etc. ... ]
+- exited with signal 9 [CPU time limit exceeded (inefficient / infinite loop)]
+- output differences (cout output)
+
+Test 14: OK    		(TreeSet null-tree print test (using TreeSet<size_t>))
+cout>	Testing TreeSet, size = 0
+cout>	Filling set...
+cout>	Contents: -
+cout>	Searching...
+	[ ... etc. ... ]
+
+Test 15: OK    		(TreeSet one-element tree print test (using TreeSet<size_t>))
+cout>	Testing TreeSet, size = 1
+cout>	Filling set...
+cout>	Contents: (-, 100, -)
+cout>	Searching...
+	[ ... etc. ... ]
+
+Test 16: OK    		(TreeSet multi-element tree print test (using TreeSet<size_t>))
+cout>	Testing TreeSet, size = 177
+cout>	Filling set...
+cout>	Contents: 100 112 122 127 134 136 139 166 177 206 215 219 232 235 252 
+cout>	  259 267 283 286 296 306 333 351 364 373 416 447 471 474 479 486 499 
+	[ ... etc. ... ]

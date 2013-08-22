@@ -1,0 +1,69 @@
+/**
+ * \mainpage HW11: Implementing a spell checker
+ *
+ * \author Kevin McSwiggen and Mars Park
+ *
+ * \tableofcontents
+ *
+ * \section intro_sec Introduction
+ *
+ * If given a list of all words, it is possible to insert all those
+ * words in a hash table. Then, we can check if an abitrary word
+ * is a legitimate word by testing if it exists in the hash table.
+ *
+ * The spell checker takes a step further and not only checks if
+ * the word exists in the hash but also suggests correct words.
+ * This spell checker does this by checking if there is a wrong
+ * letter in the word. When a word is not found in the dictionary,
+ * the spell checker will look up all variants that can be generated 
+ * by changing one character. If the spell checker finds a match in
+ * the dictionary with one of these variants, it adds to the output
+ * line.
+ *
+ * Our spell checker can be run using any of four choices of set implementation
+ * that inherit from the AbstractSet abstract template class.  StdHashSet and
+ * StdTreeSet are wrapper classes for the STL classes unordered_set<T> and
+ * set<T> respectively.  The HashSet class is a custom implementation of a 
+ * linear-probing hash set.  When the key for a given element is taken, the 
+ * insertion point advances until finding an unocupied index of the hash table.
+ * After the hash set becomes sufficiently full, it will resize the hash table
+ * and rehash the elements in the hash set to keep long clusters of keys from 
+ * negatively impacting the performance of the hash set.  The TreeSet class is a
+ * custom implementation of an AVL self-balancing binary search tree. When the 
+ * subtrees of any node differ in height by more than 1, the tree is re-balanced
+ * by rotating through the node appropriately.
+ *
+ * \section use_sec Usage
+ *
+ * The spell checking can be run using:
+ *
+ *     ./myspell [-d] [-h / -t/ -T / -H] dictionary
+ *
+ * where
+ *    - -d prints information about the data structure used to
+ *         represent the dictionary.
+ *    "dictionary" is the file name of the dictionary.
+ *    - -h Prints out:
+ *         "n expansions, load factor f, c collisions, longest run l"
+ *         where n, c, and l are integers, and f is a floating-point (double)
+ *         number, printed in the default format.
+ *    - -t Prints out a single line containing useful information about the 
+ *         structure of the tree, including its height.
+ *    - -T Prints "No statistics available"
+ *    - -H Prints "No statistics available"
+ * 
+ * \section change_sec Changes made to myspell program
+ * Myspell now keeps track of errors which have been previously seen and only
+ * prints out spelling corrections for novel errors.
+ *
+ * Myspell is now implemented using AbstractSet, and takes flages (-h, -H, -t,
+ * -T) to specify which type of set should be used to store the dictionary and
+ * set of previously-seen errors.  The dictionary and error sets are constructed
+ * on the heap as the requested type.
+ *
+ * Debugging information printed out by the -d flag now depends on which type of
+ * set is used to store the words.
+ *
+ * \subpage performance_page Peformance comparisons between the different sets
+ * can be found on their own page.
+ */

@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/cs70/!svn/ver/45742/fall12/ours/kmcswiggen-mpark/hw11
+END
+hashset-tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/hashset-tests.cpp
+END
+doxygen.config
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cs70/!svn/ver/45648/fall12/ours/kmcswiggen-mpark/hw11/doxygen.config
+END
+compiled.err
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/compiled.err
+END
+test.out
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test.out
+END
+generic-set-tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/generic-set-tests.cpp
+END
+test13.out
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test13.out
+END
+test14.out
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test14.out
+END
+performance.dox
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/performance.dox
+END
+test15.out
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test15.out
+END
+test16.out
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test16.out
+END
+treeset-tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/treeset-tests.cpp
+END
+stdhashset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/stdhashset.hpp
+END
+myspell-tests.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/myspell-tests.txt
+END
+Rubric.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45742/fall12/ours/kmcswiggen-mpark/hw11/Rubric.txt
+END
+abstractset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/abstractset.hpp
+END
+myspell.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/myspell.cpp
+END
+stdhashset-private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/stdhashset-private.hpp
+END
+test2.diff
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test2.diff
+END
+stdtreeset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/stdtreeset.hpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/cs70/!svn/ver/45615/fall12/ours/kmcswiggen-mpark/hw11/Makefile
+END
+stdtreeset-private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/stdtreeset-private.hpp
+END
+hashset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cs70/!svn/ver/45603/fall12/ours/kmcswiggen-mpark/hw11/hashset.hpp
+END
+ispell.words
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cs70/!svn/ver/44540/fall12/ours/kmcswiggen-mpark/hw11/ispell.words
+END
+test13.diff
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test13.diff
+END
+stringhash.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cs70/!svn/ver/44540/fall12/ours/kmcswiggen-mpark/hw11/stringhash.cpp
+END
+stdhashset-tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/stdhashset-tests.cpp
+END
+sampleOutput.dox
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/cs70/!svn/ver/44534/fall12/ours/kmcswiggen-mpark/hw11/sampleOutput.dox
+END
+linecheck.out
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/linecheck.out
+END
+hashset-private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cs70/!svn/ver/45603/fall12/ours/kmcswiggen-mpark/hw11/hashset-private.hpp
+END
+stringhash.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/cs70/!svn/ver/44540/fall12/ours/kmcswiggen-mpark/hw11/stringhash.hpp
+END
+treeset.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/treeset.hpp
+END
+compiled.out
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/compiled.out
+END
+test1.out
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test1.out
+END
+stdtreeset-tests.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/cs70/!svn/ver/45607/fall12/ours/kmcswiggen-mpark/hw11/stdtreeset-tests.cpp
+END
+test2.out
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test2.out
+END
+test3.out
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test3.out
+END
+smalldict.words
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/cs70/!svn/ver/44540/fall12/ours/kmcswiggen-mpark/hw11/smalldict.words
+END
+test4.out
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/cs70/!svn/ver/45650/fall12/ours/kmcswiggen-mpark/hw11/test4.out
+END
+treeset-private.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/treeset-private.hpp
+END
+mainpage.dox
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/cs70/!svn/ver/45620/fall12/ours/kmcswiggen-mpark/hw11/mainpage.dox
+END

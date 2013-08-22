@@ -1,0 +1,112 @@
+\hypertarget{class_tree_set}{\section{Tree\-Set$<$ T $>$ Class Template Reference}
+\label{class_tree_set}\index{Tree\-Set$<$ T $>$@{Tree\-Set$<$ T $>$}}
+}
+
+
+\hyperlink{class_tree_set}{Tree\-Set} to be inherited.  
+
+
+
+
+{\ttfamily \#include $<$treeset.\-hpp$>$}
+
+Inheritance diagram for Tree\-Set$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree_set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_tree_set_a915f05820dc9f0e2ef34263f05951c6d}{\hyperlink{class_tree_set_a915f05820dc9f0e2ef34263f05951c6d}{Tree\-Set} ()}\label{class_tree_set_a915f05820dc9f0e2ef34263f05951c6d}
+
+\begin{DoxyCompactList}\small\item\em Default constructor for \hyperlink{class_tree_set}{Tree\-Set}. \end{DoxyCompactList}\item 
+\hyperlink{class_tree_set_a698f6c217e682f1ab29da87d89dd16b6}{$\sim$\-Tree\-Set} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \hyperlink{class_tree_set}{Tree\-Set}. \end{DoxyCompactList}\item 
+\hypertarget{class_tree_set_ab8819494cda32c08cf9217f3419e4ff3}{size\-\_\-t \hyperlink{class_tree_set_ab8819494cda32c08cf9217f3419e4ff3}{size} () const }\label{class_tree_set_ab8819494cda32c08cf9217f3419e4ff3}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of objects stored in the tree. \end{DoxyCompactList}\item 
+void \hyperlink{class_tree_set_a04a78c1b3d70968c6547589c8add3d4a}{insert} (const T \&x)
+\begin{DoxyCompactList}\small\item\em Inserts an element into the tree. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tree_set_aee288e3b9299f8fcbac0834543865128}{exists} (const T \&x) const 
+\begin{DoxyCompactList}\small\item\em Checks if the element exists in the tree. \end{DoxyCompactList}\item 
+int \hyperlink{class_tree_set_a00da9efa0cac8a3dab15fd1c23e0d2b4}{height} () const 
+\begin{DoxyCompactList}\small\item\em Returns the height of tree. \end{DoxyCompactList}\item 
+\hypertarget{class_tree_set_af2af42baedbdf6d0d2a8b794f3a9eaa4}{std\-::ostream \& \hyperlink{class_tree_set_af2af42baedbdf6d0d2a8b794f3a9eaa4}{print} (std\-::ostream \&out) const }\label{class_tree_set_af2af42baedbdf6d0d2a8b794f3a9eaa4}
+
+\begin{DoxyCompactList}\small\item\em Prints the tree. \end{DoxyCompactList}\item 
+\hypertarget{class_tree_set_a05d9c633b020f9e759997f4ccb863ca2}{void \hyperlink{class_tree_set_a05d9c633b020f9e759997f4ccb863ca2}{debug} () const }\label{class_tree_set_a05d9c633b020f9e759997f4ccb863ca2}
+
+\begin{DoxyCompactList}\small\item\em Prints debugging information for the \hyperlink{class_hash_set}{Hash\-Set} to cerr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Tree\-Set$<$ T $>$}
+
+\hyperlink{class_tree_set}{Tree\-Set} to be inherited. 
+
+Uses an A\-V\-L Tree. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tree_set_a698f6c217e682f1ab29da87d89dd16b6}{\index{Tree\-Set@{Tree\-Set}!$\sim$\-Tree\-Set@{$\sim$\-Tree\-Set}}
+\index{$\sim$\-Tree\-Set@{$\sim$\-Tree\-Set}!TreeSet@{Tree\-Set}}
+\subsubsection[{$\sim$\-Tree\-Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Tree\-Set}$<$ T $>$\-::$\sim${\bf Tree\-Set} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tree_set_a698f6c217e682f1ab29da87d89dd16b6}
+
+
+Destructor for \hyperlink{class_tree_set}{Tree\-Set}. 
+
+Uses the destructor of the private class Node to recursively delete the tree. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tree_set_aee288e3b9299f8fcbac0834543865128}{\index{Tree\-Set@{Tree\-Set}!exists@{exists}}
+\index{exists@{exists}!TreeSet@{Tree\-Set}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Tree\-Set}$<$ T $>$\-::exists (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tree_set_aee288e3b9299f8fcbac0834543865128}
+
+
+Checks if the element exists in the tree. 
+
+Calls a helper function to recursively search for the element. 
+
+Implements \hyperlink{class_abstract_set_a2b9d1b3662218ab3ba98fd3db085852f}{Abstract\-Set$<$ T $>$}.
+
+\hypertarget{class_tree_set_a00da9efa0cac8a3dab15fd1c23e0d2b4}{\index{Tree\-Set@{Tree\-Set}!height@{height}}
+\index{height@{height}!TreeSet@{Tree\-Set}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Tree\-Set}$<$ T $>$\-::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tree_set_a00da9efa0cac8a3dab15fd1c23e0d2b4}
+
+
+Returns the height of tree. 
+
+Returns -\/1 for an empty tree. \hypertarget{class_tree_set_a04a78c1b3d70968c6547589c8add3d4a}{\index{Tree\-Set@{Tree\-Set}!insert@{insert}}
+\index{insert@{insert}!TreeSet@{Tree\-Set}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\-Set}$<$ T $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_tree_set_a04a78c1b3d70968c6547589c8add3d4a}
+
+
+Inserts an element into the tree. 
+
+Calls a helper function to recursively find the insertion point and balance the tree. 
+
+Implements \hyperlink{class_abstract_set_a12afe4c5cea823491fdfca02cc644bf3}{Abstract\-Set$<$ T $>$}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{treeset_8hpp}{treeset.\-hpp}\item 
+\hyperlink{treeset-private_8hpp}{treeset-\/private.\-hpp}\end{DoxyCompactItemize}

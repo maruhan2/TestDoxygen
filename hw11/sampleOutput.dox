@@ -1,0 +1,55 @@
+/**
+ * \page sample_output Sample Output
+ *
+ * This is a sample run of a correctly working myspell program. Note that this
+ * example does not cover all edge cases, but is instead meant to demonstrate
+ * formatting. Please ask the graders for more direction if the formatting is
+ * unclear for any situtation not shown here.
+ *
+ * None of the following lines contain a space before the newline (including
+ * the blank line). The output was terminated using Ctrl-D, so one blank
+ * line is left after the "yay: bay" line.
+ *
+ * The debugging line (15 expansions...) is sent to cerr. The other lines
+ * go to cout.
+ * 
+ * -------------
+ *
+ * Example HashSet Session:
+ *
+ *          % ./myspell -d -h ispell.words
+ *          15 expansions, load factor 0.531479, 7857 collisions, longest run 6
+ *          This is a sentence spelled incorrrectluy.
+ *          incorrrectluy:
+ *          This is a sentence spelled correctly.
+ *          The next input will be a blank line.
+ *    
+ *          yay! Yay?
+ *          yay: bay day gay hay jay lay may nay pay ray say way
+ *
+ *
+ * Example TreeSet Session:
+ *
+ *          % ./myspell -t -d ispell.words 
+ *          34831 nodes, height 35, average depth 17.7184
+ *          This is a sentence spelled incorrrectluy.
+ *          incorrrectluy:
+ *          This is a sentence spelled correctly.
+ *          The next input will be a blank line.
+ *    
+ *          yay! Yay?
+ *          yay: bay day gay hay jay lay may nay pay ray say way
+ *
+ * Example StlSet Session:
+ *
+ *          % ./myspell -T -d ispell.words 
+ *          No statistics available.
+ *          This is a sentence spelled incorrrectluy.
+ *          incorrrectluy:
+ *          This is a sentence spelled correctly.
+ *          The next input will be a blank line.
+ *    
+ *          yay! Yay?
+ *          yay: bay day gay hay jay lay may nay pay ray say way
+ *
+ */

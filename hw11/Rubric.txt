@@ -1,0 +1,467 @@
+===============================================================================
+BINARY TREES & INHERITANCE ASSIGNMENT -- GRADING RUBRIC
+===============================================================================
+
+NAMES: Kevin McSwiggen and Mars Park
+
+===============================================================================
+SUBMISSION. Total = 8 / 12
+===============================================================================
+
+-----
+FILES
+-----
+
+---> We do not have Doxygen.config because we didn't know we had to copy it
+---> from hw10.
+
+| GRADER: Thanks for adding it back!
+
+     All required files appear correctly in the subversion repository.
+
+  0) Missing some files.
+
+-------------
+TESTABILITY *
+-------------
+
++++> Our output is great.
+ 
+  3) Output is correctly formatted, with the correct number of spaces.
+
+     Output is properly sent to the correct stream (e.g., cout vs cerr).
+
+     There is no other output beyond what is specified in the assignment.
+
+     Interfaces are consistent with assignment specifications.
+
+     Test code can use the required class templates (e.g., TreeSet) by
+       including their header file without any prior definitions. No additional
+       files need to be linked against the code.
+
+-----
+TOOLS
+-----
+
++++> Names of group are present.
++++> Passes linecheck besides terminal output.
++++> We couldn't check it with doxygen because we didn't know we had to copy
++++> the config file, but it seems alright when we copied the file later.
+
+  1) Names of group are in all files.
+
+     Passes linecheck (except for Makefile or output copied from terminal).
+
+     Doxygen comments appear properly in both HTML and LaTeX form.
+
+-------------
+COMPILATION *
+-------------
+
++++> Make and "make test" works properly.
+
+     Running "make" creates the myspell program without any warnings 
+       (when the compiler is run with -Wall -Wextra -pedantic).
+     
+     AND, running "make test" creates and runs all tests without any
+       warnings.
+
+  4) The submission compiles, but has issues with dependencies.
+
+| GRADER: Your myspell program is dependent on the $(GTEST_LIB) options. These
+|         are unnecessary and will not always be available.
+
+
+===============================================================================
+TESTING. Total =   5 / 9
+===============================================================================
+
+------------
+TEMPLATING *
+------------
+
++++> Templating works fine. Our tests are adequate.
+
+  2) Demonstrates that all templated classes work correctly on
+       expected operations.
+
+---------------
+TREESET-TESTS *
+---------------
+
++++> Thorough tests the treeset implementation.
+
+| GRADER: You don't call your stats on an empty tree to make sure those
+|         don't make your program seg fault.  
+
+     Clearly shows thorough testing that covers all interesting cases
+       for the chosen treeset implementation.
+
+  2) Clearly shows testing, but an obvious case (e.g. empty TreeSet)
+       is missed.
+
+---------------
+MYSPELL-TESTS *
+---------------
+
++++> Thoroughly tests interesting cases.
+
+| GRADER: You might also try changing the order of the option flags.
+
+     Clearly shows thorough testing that covers all interesting cases.
+
+  1) Clearly shows testing, but an obvious case is missed.
+
+===============================================================================
+CORRECTNESS. Total =   15 / 20
+===============================================================================
+
+---------------------
+INPUT: COMMAND LINE *
+---------------------
+
++++> The flags produce the correct debugging output.
+
+| GRADER: Your error message for unrecognized flags is just printing
+|         our the usage and switches messges again, which I'm not sure
+|         how helpful that is.
+
+  2) The -d flag is optional and creates the correct debugging output.
+
+     The -h, -t, -H, and -T flags are optional and correctly select among
+       different implementations.
+
+     The program does not leak memory, even if the user specifies too many
+       flags.
+
+     The program prints a nice error message to cerr if the given dictionary
+       file does not exist, a dictionary file is not specified on the command
+       line, or unrecognized flags are given.
+
+--------------------
+INPUT: SPELL-CHECK *
+--------------------
+
++++> Spell-check reads from cin and works correctly.
+  
+  1) The document to spell-check is read from cin.
+
+     Words are identified correctly.
+
+---------------------
+OUTPUT: CORRECTNESS *
+---------------------
+
++++> Misspellings and corrections are correctly listed.
+
+  1) Repeated misspellings are only listed once in the output.
+
+     The correct corrections appear for each misspelling.
+
+     The misspellings are listed in the order they were encountered.
+
+-------------
+AbstractSet *
+-------------
+
++++> The AbstractSet<T> is correctly implemented.
+
+  2) An abstract AbstractSet<T> exists, with a virtual destructor
+       and pure virtual insert, exists, and size functions.
+
+---------
+TreeSet *
+---------
+
++++> TreeSet<T> inherits from AbstractSet<T>.
++++> Operation time has the correct complexity.
++++> All functions work properly.
+
+| GRADER: Did you look at your test outputs?  You have a memory leak
+|         from either inefficiency or an infinite loop.
+
+     TreeSet<T> inherits from AbstractSet<T>.
+  
+     Insert and exists on an n-node tree work in O(log n) expected
+       amortized time.
+
+     There are no memory leaks, and the default constructor
+       works properly.
+
+     The print method and height method exist and work properly.
+
+  2) Insert and exists work, but do not satisfy the required time
+     bounds.
+
+---------
+HashSet *
+---------
+
++++> HashSet is correctly implemented.
+
+  2) The HashSet template works and inherits from AbstractSet<T>.
+
+--------
+StlSet *
+--------
+
++++> StlSet is called StdTreeSet like it is supposed to be and implemented
++++> correctly.
+
+  2) Works and inherits from AbstractSet<T>.
+
+--------------
+UnorderedSet *
+--------------
+
++++> UnorderedSet is called StdHashSet like it is supposed to be and implemented
++++> correctly.
+
+
+  2) Works and inherits from AbstractSet<T>.
+
+----------
+INTERFACES
+----------
+
++++> All the classes interfaces are correctly implemented.
+
+| GRADER: You don't properly disable copy constructor and assignment operator
+|         in any of your files.
+
+     For all required classes:
+
+     Appropriate division of code between Header Files and
+       Implementation Files.
+     
+     Appropriate division between public and private:
+     
+       Nothing is public that might change if the class were implemented
+         differently.
+
+       Nothing is private that is essential for using objects of the class.
+
+     Choice of friends makes sense.
+
+     Proper use of virtual keyword.
+
+     Appropriate disabling/implementing of Copy Constructor and Assignment
+       Operator when the compiler-synthesized versions are insufficient.
+
+  1) Minor problems present in all classes.
+   
+     OR, one significant problem.
+
+
+===============================================================================
+STYLE. Total =   19 / 22
+===============================================================================
+
+------
+LAYOUT
+------
+
++++> Indentation is consistent.
+
+  2) Indentation is consistent with a well-known style.
+
+     Whitespace is used to help readability.
+
+------
+NAMING
+------
+
++++> Names are descriptive.
+
+  2) All names are appropriately descriptive and adhere to CS70 style.
+       (e.g. CONSTANT_NAMES, localVariables, and dataMembers_).
+
+---------------------
+DOXYGEN DOCUMENTATION
+---------------------
+
++++> Explains each member of each class.
++++> Some complicated steps are explained in detail.
+
+| GRADER: I don't see anywhere that you explain what functions are needed in
+|         T. What if I wanted to put Bananas in your hashset, but my Bananas
+|         didn't have a myhash() function?
+
+     Explains the most important members of each class.
+
+     Explains the most important insights for understanding how each class and
+       top-level function operates.
+
+     Explains any assumptions made by a class or function (e.g., if Template<T>
+       requires that T have an addHat() method, you need to say so.).
+
+  2) Overall well done, but missing a key insight.
+
+----------
+COMMENTING
+----------
+
++++> Commenting was excellent.
+
+  4) Commenting is at just the right level.
+
+     Comments are accurate and up-to-date.
+
+     Complex blocks of code are annotated with their high-level purpose.
+
+--------
+ELEGANCE
+--------
+
++++> Code is mostly elegant.
+
+| GRADER: insertAtNode() is a bit long. Rule of thumb is a function should
+|         fit on one screen.
+
+| GRADER: I think your rotateRight and rotateLeft functions could use
+|         some clarifying.
+
+     Code is clear and easy to believe correct or incorrect. 
+
+  3) Code could be clarified in a few places.
+
+     AND/OR, code has excessive nesting in a few places.
+
+------
+IDIOMS
+------
+
++++> We used correct C++ idioms.
+
+  2) Uses C++ idioms where appropriate.
+  
+     Including, but not limited to:
+        No uses of post-increment when pre-increment is sufficient.
+        Member functions refer to foo() and bar_ instead of this->foo()
+          or (*this).bar_.
+        Uses foo->bar instead of (*foo).bar.
+        Proper choice of control flow statements (e.g.: for vs while).
+        Uses c++ style casts instead of c style casts.
+        Random seed is not set more than once.
+
+----------------
+UNSAFE PRACTICES
+----------------
+
++++> We didn't have unsafe practices.
+
+  4) Uses nothing that would be unsafe in a large project.
+
+     Including, but not limited to:
+       No top-level variables.  
+       No deprecated functions.
+       No disruptive control-flow statements (i.e., goto).
+       No 'using' directives in header files.
+       No #defines except for #include guards.
+       All constants other than 0 or 1 have meaningful names (no magic
+         numbers).
+       All header files use #include guards.
+       Fill character in output streams is never permanently changed.
+
+===============================================================================
+WRITTEN. Total =   11 / 12
+===============================================================================
+
+-------------
+WRITTEN STYLE
+-------------
+
++++> Responses were clear.
+
+| GRADER: "... behaviour." What, are we british now?
+
+  4) Responses are clear, concise, and easy to understand.
+
+     AND, Responses use proper spelling and grammar.
+
+----------------------------------
+Doxygen Documentation -- MySpell *
+----------------------------------
+
++++> We described all the required criteria.
+
+| GRADER: I get the usage from your introduction, but I'd argue you don't
+|         really ever state the purpose of the program.
+
+     Describes the purpose of the program.
+
+     Describes the usage of the program.
+
+     Explains the general approach used by the program.
+
+     Describes the choice of binary tree implementation.
+
+  3) Missing one of the four items listed for a 4.
+
+--------------------------------------
+Doxygen Documentation -- Performance *
+--------------------------------------
+
++++> Test set up was carefully described, and used 3 text files to compare
++++> performance.
++++> We included the text files in the testFiles folder as requested.
+
+  4) Test setups are are clearly described, including but not limited to:
+       Characteristics of the dictionary.
+       Characteristics of the test input.
+       Which computer was used to run the tests.
+       If not a CS machine, the type of computer, compiler,
+         and operating system being used.
+
+     Times are taken from code compiled with -O3,
+       both for this implementation and the old Assignment 10 myspell.
+
+     Interesting conclusions are drawn from the data
+       (e.g., can you explain why the results turned out the way
+       they did?).
+
+
+===============================================================================
+SELF ASSESSMENT. Total =   2 / 5
+===============================================================================
+
++++> Every section is commented.
+
+| GRADER: You only have one negative arrow comment in this whole
+|         self-assessment.  That's probably a bad sign...
+
+     Every section of the rubric is commented.
+     
+     Comments provide compelling evidence that sample solution was read and
+       compared to submission (e.g., errors in submitted code noted, and
+       correct solutions lauded).
+
+     All comments are in the correct format.
+ 
+  2) Hardly anything noticed.
+
+===============================================================================
+COMBINED SCORE: 143.93
+===============================================================================
+
+  Your Scores:
+    SUBMISSION      =   8 / 12
+    TESTING         =   5 / 9
+    CORRECTNESS     =   15 / 20
+    STYLE           =   19 / 22
+    WRITTEN         =   11 / 12
+    SELF ASSESSMENT =   2 / 5
+
+WHERE Combined      = 10.00 * SUBMISSION
+                    + 10.00 * TESTING
+                    + 15.00 * CORRECTNESS
+                    + 20.00 * STYLE
+                    + 15.00 * WRITTEN
+                    + 10.00 * SELF ASSESSMENT
+                    + 20.00 * CONSISTENCY BONUS
+                    + 74.32 @ So its not a percentage
+
+===============================================================================
+GRADED BY: Miranda Parker <mparker@cs.hmc.edu>
+REVIEWED BY: Lawrence Thibodeaux <lthibodeaux@hmc.edu>
+===============================================================================

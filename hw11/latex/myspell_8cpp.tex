@@ -1,0 +1,165 @@
+\hypertarget{myspell_8cpp}{\section{myspell.\-cpp File Reference}
+\label{myspell_8cpp}\index{myspell.\-cpp@{myspell.\-cpp}}
+}
+
+
+Code for the My\-Spell spell checking program.  
+
+
+{\ttfamily \#include \char`\"{}abstractset.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stringhash.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hashset.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdhashset.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}treeset.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdtreeset.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$cctype$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{myspell_8cpp_a1ff022344debd4323f3df7b0dabc088a}{usage} (const char $\ast$program\-Name)
+\begin{DoxyCompactList}\small\item\em Print a usage message and exit. \end{DoxyCompactList}\item 
+int \hyperlink{myspell_8cpp_acb02a6d171cf8bec5225d62422f18f36}{process\-Options} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&debug, bool \&stdhash, bool \&ownhash, bool \&stdtree, bool \&owntree)
+\begin{DoxyCompactList}\small\item\em Option processing. \end{DoxyCompactList}\item 
+bool \hyperlink{myspell_8cpp_ac74592c006b1f8f15416598435dc6b5c}{read\-Dictionary} (const string \&file\-Name, \hyperlink{class_abstract_set}{Abstract\-Set}$<$ string $>$ $\ast$our\-Set)
+\begin{DoxyCompactList}\small\item\em Generates a dictionary \hyperlink{class_abstract_set}{Abstract\-Set} for My\-Spell. \end{DoxyCompactList}\item 
+void \hyperlink{myspell_8cpp_aaa408935628477487947e3820240bad5}{permute\-Spelling} (const string \&word, \hyperlink{class_abstract_set}{Abstract\-Set}$<$ string $>$ $\ast$dictionary)
+\begin{DoxyCompactList}\small\item\em Helper function for check\-Spelling which generates suggestions. \end{DoxyCompactList}\item 
+void \hyperlink{myspell_8cpp_a5470dc71d1982de0b3cad6312506a1fa}{check\-Spelling} (\hyperlink{class_abstract_set}{Abstract\-Set}$<$ string $>$ $\ast$dictionary, \hyperlink{class_abstract_set}{Abstract\-Set}$<$ string $>$ $\ast$seen)
+\begin{DoxyCompactList}\small\item\em Checks input against an \hyperlink{class_abstract_set}{Abstract\-Set} dictionary of words. \end{DoxyCompactList}\item 
+int \hyperlink{myspell_8cpp_ac0f2228420376f4db7e1274f2b41667c}{main} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function for My\-Spell spellchecker. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Code for the My\-Spell spell checking program. \begin{DoxyAuthor}{Author}
+Kevin Mc\-Swiggen and Mars Park Option processing code adapted from Bailey Campbell's Nat\-Sel\-Path. 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{myspell_8cpp_a5470dc71d1982de0b3cad6312506a1fa}{\index{myspell.\-cpp@{myspell.\-cpp}!check\-Spelling@{check\-Spelling}}
+\index{check\-Spelling@{check\-Spelling}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{check\-Spelling}]{\setlength{\rightskip}{0pt plus 5cm}void check\-Spelling (
+\begin{DoxyParamCaption}
+\item[{{\bf Abstract\-Set}$<$ string $>$ $\ast$}]{dictionary, }
+\item[{{\bf Abstract\-Set}$<$ string $>$ $\ast$}]{seen}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_a5470dc71d1982de0b3cad6312506a1fa}
+
+
+Checks input against an \hyperlink{class_abstract_set}{Abstract\-Set} dictionary of words. 
+
+This function uses a previously-\/generated dictionary and compares input from cin against its content, offering spelling suggestions for any unrecognized words. \hypertarget{myspell_8cpp_ac0f2228420376f4db7e1274f2b41667c}{\index{myspell.\-cpp@{myspell.\-cpp}!main@{main}}
+\index{main@{main}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_ac0f2228420376f4db7e1274f2b41667c}
+
+
+Main function for My\-Spell spellchecker. 
+
+This function processes all option arguments, generates a dictionary set from the supplied file, and reads from an input source, offering spelling corrections for unrecognized words. Load our dictionary.
+
+$<$ Print out debugging information.
+
+Generate spelling suggestions.
+
+Delete the dynamically typed dictionary and seen word set. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Argument count \\
+\hline
+{\em argv} & Arguments \\
+\hline
+\end{DoxyParams}
+\hypertarget{myspell_8cpp_aaa408935628477487947e3820240bad5}{\index{myspell.\-cpp@{myspell.\-cpp}!permute\-Spelling@{permute\-Spelling}}
+\index{permute\-Spelling@{permute\-Spelling}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{permute\-Spelling}]{\setlength{\rightskip}{0pt plus 5cm}void permute\-Spelling (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{word, }
+\item[{{\bf Abstract\-Set}$<$ string $>$ $\ast$}]{dictionary}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_aaa408935628477487947e3820240bad5}
+
+
+Helper function for check\-Spelling which generates suggestions. 
+
+Generates spelling suggestions for check\-Spelling based on swapped letters in the original word. \hypertarget{myspell_8cpp_acb02a6d171cf8bec5225d62422f18f36}{\index{myspell.\-cpp@{myspell.\-cpp}!process\-Options@{process\-Options}}
+\index{process\-Options@{process\-Options}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{process\-Options}]{\setlength{\rightskip}{0pt plus 5cm}int process\-Options (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{bool \&}]{debug, }
+\item[{bool \&}]{stdhash, }
+\item[{bool \&}]{ownhash, }
+\item[{bool \&}]{stdtree, }
+\item[{bool \&}]{owntree}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_acb02a6d171cf8bec5225d62422f18f36}
+
+
+Option processing. 
+
+Scan through the arguments, looking at switches. If we run into a non-\/switch argument, exit the function.
+
+If an illegal switch is detected, we will print a usage message to cerr and terminate the program with an exit status of 2.
+
+\begin{DoxyReturn}{Returns}
+The number of the first non-\/switch argument encountered. If there are no non-\/switch arguments, the return value equals argc.
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This function is fairly long, even though it does relatively little. That is generally true of switch-\/processing functions, and it is not considered bad style so long as the function limits itself to simple operations such as setting Boolean flags. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Argument count passed to main \\
+\hline
+{\em argv} & Argument vector passed to main \\
+\hline
+{\em debug} & M\-O\-D\-I\-F\-I\-E\-D\-: set true if debugging enabled \\
+\hline
+{\em stdhash} & Set true if using S\-T\-L unordered set \\
+\hline
+{\em ownhash} & Set true if using custom hashset \\
+\hline
+{\em stdtree} & Set true if using S\-T\-L ordered set \\
+\hline
+{\em owntree} & Set true if using custom tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{myspell_8cpp_ac74592c006b1f8f15416598435dc6b5c}{\index{myspell.\-cpp@{myspell.\-cpp}!read\-Dictionary@{read\-Dictionary}}
+\index{read\-Dictionary@{read\-Dictionary}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{read\-Dictionary}]{\setlength{\rightskip}{0pt plus 5cm}bool read\-Dictionary (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{file\-Name, }
+\item[{{\bf Abstract\-Set}$<$ string $>$ $\ast$}]{our\-Set}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_ac74592c006b1f8f15416598435dc6b5c}
+
+
+Generates a dictionary \hyperlink{class_abstract_set}{Abstract\-Set} for My\-Spell. 
+
+Takes as a parameter a filename and an Abstract\-Set$<$string$>$ reference reading from the file to generate a dictionary in the set. \hypertarget{myspell_8cpp_a1ff022344debd4323f3df7b0dabc088a}{\index{myspell.\-cpp@{myspell.\-cpp}!usage@{usage}}
+\index{usage@{usage}!myspell.cpp@{myspell.\-cpp}}
+\subsubsection[{usage}]{\setlength{\rightskip}{0pt plus 5cm}void usage (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{program\-Name}
+\end{DoxyParamCaption}
+)}}\label{myspell_8cpp_a1ff022344debd4323f3df7b0dabc088a}
+
+
+Print a usage message and exit. 
+
+\begin{DoxyRemark}{Remarks}
+As is conventional, the exit status is 2 if there is a usage error. 
+\end{DoxyRemark}

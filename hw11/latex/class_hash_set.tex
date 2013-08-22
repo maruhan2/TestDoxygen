@@ -1,0 +1,137 @@
+\hypertarget{class_hash_set}{\section{Hash\-Set$<$ T $>$ Class Template Reference}
+\label{class_hash_set}\index{Hash\-Set$<$ T $>$@{Hash\-Set$<$ T $>$}}
+}
+
+
+Hashset for an arbitrary class T.  
+
+
+
+
+{\ttfamily \#include $<$hashset.\-hpp$>$}
+
+Inheritance diagram for Hash\-Set$<$ T $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hash_set}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hash_set_af3813c169024060da2044aafe3851a8d}{Hash\-Set} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \hyperlink{class_hash_set}{Hash\-Set}. \end{DoxyCompactList}\item 
+\hypertarget{class_hash_set_a58686b84c9bb5e744e279e5d52b8c656}{\hyperlink{class_hash_set_a58686b84c9bb5e744e279e5d52b8c656}{$\sim$\-Hash\-Set} ()}\label{class_hash_set_a58686b84c9bb5e744e279e5d52b8c656}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of objects stored in the hash. \end{DoxyCompactList}\item 
+\hypertarget{class_hash_set_a50921b9d5cacac394dc71a63bee037a7}{size\-\_\-t \hyperlink{class_hash_set_a50921b9d5cacac394dc71a63bee037a7}{size} () const }\label{class_hash_set_a50921b9d5cacac394dc71a63bee037a7}
+
+\begin{DoxyCompactList}\small\item\em Size of the set. \end{DoxyCompactList}\item 
+void \hyperlink{class_hash_set_a0134587851696ec3f2cb41c34f7f70b5}{insert} (const T \&x)
+\begin{DoxyCompactList}\small\item\em Inserts the object of type T into the hash. \end{DoxyCompactList}\item 
+bool \hyperlink{class_hash_set_a791fc527424c724a415ebd88b38a42ba}{exists} (const T \&x) const 
+\begin{DoxyCompactList}\small\item\em Checks if the object of type T is in the hash. \end{DoxyCompactList}\item 
+\hypertarget{class_hash_set_a549b200c4b34ef30b8dafbbae6cad008}{size\-\_\-t \hyperlink{class_hash_set_a549b200c4b34ef30b8dafbbae6cad008}{buckets} () const }\label{class_hash_set_a549b200c4b34ef30b8dafbbae6cad008}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of buckets. \end{DoxyCompactList}\item 
+\hypertarget{class_hash_set_a85c4d8f088f5679d587e06c07c362ac5}{size\-\_\-t \hyperlink{class_hash_set_a85c4d8f088f5679d587e06c07c362ac5}{reallocations} () const }\label{class_hash_set_a85c4d8f088f5679d587e06c07c362ac5}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of times the hash table has resized itself. \end{DoxyCompactList}\item 
+size\-\_\-t \hyperlink{class_hash_set_a54fa80d8af72e633479aa4520a7e5d2f}{collisions} () const 
+\item 
+size\-\_\-t \hyperlink{class_hash_set_a21daebf2846f630ab4300c4c0468c929}{maximal} () const 
+\item 
+\hypertarget{class_hash_set_a83defc0197ac5362971ff18a210205f6}{void \hyperlink{class_hash_set_a83defc0197ac5362971ff18a210205f6}{debug} () const }\label{class_hash_set_a83defc0197ac5362971ff18a210205f6}
+
+\begin{DoxyCompactList}\small\item\em Prints debugging information for the \hyperlink{class_hash_set}{Hash\-Set} to cerr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class Hash\-Set$<$ T $>$}
+
+Hashset for an arbitrary class T. 
+
+This class includes a class Element that has data members that holds a pointer to a T type object called data\-\_\- and a boolean called used\-\_\- that shows if the Element has been inserted into the hash.
+
+\begin{DoxyRemark}{Remarks}
+Deletion is not supported. 
+\end{DoxyRemark}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_hash_set_af3813c169024060da2044aafe3851a8d}{\index{Hash\-Set@{Hash\-Set}!Hash\-Set@{Hash\-Set}}
+\index{Hash\-Set@{Hash\-Set}!HashSet@{Hash\-Set}}
+\subsubsection[{Hash\-Set}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Hash\-Set}$<$ T $>$\-::{\bf Hash\-Set} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hash_set_af3813c169024060da2044aafe3851a8d}
+
+
+Default constructor for \hyperlink{class_hash_set}{Hash\-Set}. 
+
+Initializes buckets\-\_\- as 2 and the remaining data members as 0. All Elements are initialized as false for used\-\_\-.\-Destructor. Deletes the pointers. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hash_set_a54fa80d8af72e633479aa4520a7e5d2f}{\index{Hash\-Set@{Hash\-Set}!collisions@{collisions}}
+\index{collisions@{collisions}!HashSet@{Hash\-Set}}
+\subsubsection[{collisions}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\-\_\-t {\bf Hash\-Set}$<$ T $>$\-::collisions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_set_a54fa80d8af72e633479aa4520a7e5d2f}
+Returns that number of times an insert into the current hash table representation has found a non-\/empty bucket. \hypertarget{class_hash_set_a791fc527424c724a415ebd88b38a42ba}{\index{Hash\-Set@{Hash\-Set}!exists@{exists}}
+\index{exists@{exists}!HashSet@{Hash\-Set}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Hash\-Set}$<$ T $>$\-::exists (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_hash_set_a791fc527424c724a415ebd88b38a42ba}
+
+
+Checks if the object of type T is in the hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A reference to a constant T. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_abstract_set_a2b9d1b3662218ab3ba98fd3db085852f}{Abstract\-Set$<$ T $>$}.
+
+\hypertarget{class_hash_set_a0134587851696ec3f2cb41c34f7f70b5}{\index{Hash\-Set@{Hash\-Set}!insert@{insert}}
+\index{insert@{insert}!HashSet@{Hash\-Set}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Hash\-Set}$<$ T $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_hash_set_a0134587851696ec3f2cb41c34f7f70b5}
+
+
+Inserts the object of type T into the hash. 
+
+Insert will cause the hash to resize itself when size\-\_\-/buckets\-\_\- is greater than the load factor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & A reference to a constant T. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_abstract_set_a12afe4c5cea823491fdfca02cc644bf3}{Abstract\-Set$<$ T $>$}.
+
+\hypertarget{class_hash_set_a21daebf2846f630ab4300c4c0468c929}{\index{Hash\-Set@{Hash\-Set}!maximal@{maximal}}
+\index{maximal@{maximal}!HashSet@{Hash\-Set}}
+\subsubsection[{maximal}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ size\-\_\-t {\bf Hash\-Set}$<$ T $>$\-::maximal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_set_a21daebf2846f630ab4300c4c0468c929}
+Returns the length of the longest chain (in the case of separate chaining) or cluster (in the case of open addressing) discovered so far in the current hash table representation. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{hashset_8hpp}{hashset.\-hpp}\item 
+\hyperlink{hashset-private_8hpp}{hashset-\/private.\-hpp}\end{DoxyCompactItemize}

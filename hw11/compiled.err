@@ -1,0 +1,124 @@
+[01;31mhashset-tests.cpp:25:5: error: unknown type name 'string'; did you mean 'std::string'?[m
+[01;31m    string testString = "a";[m
+[01;31m    ^~~~~~[m
+[01;31m    std::string[m
+[01;31m/cs/cs70/include/v1/iosfwd:188:65: note: 'std::string' declared here[m
+[01;31mtypedef basic_string<char, char_traits<char>, allocator<char> > string;[m
+[01;31m                                                                ^[m
+[01;31mhashset-tests.cpp:35:13: error: use of undeclared identifier 'string'; did you mean 'std::string'?[m
+[01;31m    HashSet<string> stringSet;[m
+[01;31m            ^[m
+[01;31mhashset-tests.cpp:36:15: error: use of undeclared identifier 'stringSet'[m
+[01;31m    EXPECT_EQ(stringSet.size(), 0);[m
+[01;31m              ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1848:55: note: expanded from macro 'EXPECT_EQ'[m
+[01;31m                      EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \[m
+[01;31m                                                      ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/internal/gtest-internal.h:162:54: note: expanded from macro 'GTEST_IS_NULL_LITERAL_'[m
+[01;31m    (sizeof(::testing::internal::IsNullLiteralHelper(x)) == 1)[m
+[01;31m                                                     ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:162:23: note: expanded from macro 'EXPECT_PRED_FORMAT2'[m
+[01;31m  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)[m
+[01;31m                      ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:147:17: note: expanded from macro 'GTEST_PRED_FORMAT2_'[m
+[01;31m  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\[m
+[01;31m                ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'[m
+[01;31m  if (const ::testing::AssertionResult gtest_ar = (expression)) \[m
+[01;31m                                                   ^[m
+[01;31mhashset-tests.cpp:36:5: error: type name requires a specifier or qualifier[m
+[01;31m    EXPECT_EQ(stringSet.size(), 0);[m
+[01;31m    ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1848:67: note: expanded from macro 'EXPECT_EQ'[m
+[01;31m                      EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \[m
+[01;31m                                                                  ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:162:23: note: expanded from macro 'EXPECT_PRED_FORMAT2'[m
+[01;31m  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)[m
+[01;31m                      ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:147:17: note: expanded from macro 'GTEST_PRED_FORMAT2_'[m
+[01;31m  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\[m
+[01;31m                ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'[m
+[01;31m  if (const ::testing::AssertionResult gtest_ar = (expression)) \[m
+[01;31m                                                   ^[m
+[01;31mhashset-tests.cpp:36:5: error: expected ')'[m
+[01;31m    EXPECT_EQ(stringSet.size(), 0);[m
+[01;31m    ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1848:67: note: expanded from macro 'EXPECT_EQ'[m
+[01;31m                      EqHelper<GTEST_IS_NULL_LITERAL_(expected)>::Compare, \[m
+[01;31m                                                                  ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:162:23: note: expanded from macro 'EXPECT_PRED_FORMAT2'[m
+[01;31m  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)[m
+[01;31m                      ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:147:17: note: expanded from macro 'GTEST_PRED_FORMAT2_'[m
+[01;31m  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\[m
+[01;31m                ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'[m
+[01;31m  if (const ::testing::AssertionResult gtest_ar = (expression)) \[m
+[01;31m                                                   ^[m
+[01;31mhashset-tests.cpp:36:5: note: to match this '('[m
+[01;31m    EXPECT_EQ(stringSet.size(), 0);[m
+[01;31m    ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1847:3: note: expanded from macro 'EXPECT_EQ'[m
+[01;31m  EXPECT_PRED_FORMAT2(::testing::internal:: \[m
+[01;31m  ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:162:3: note: expanded from macro 'EXPECT_PRED_FORMAT2'[m
+[01;31m  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)[m
+[01;31m  ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:147:3: note: expanded from macro 'GTEST_PRED_FORMAT2_'[m
+[01;31m  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\[m
+[01;31m  ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:77:51: note: expanded from macro 'GTEST_ASSERT_'[m
+[01;31m  if (const ::testing::AssertionResult gtest_ar = (expression)) \[m
+[01;31m                                                  ^[m
+[01;31mhashset-tests.cpp:40:9: error: use of undeclared identifier 'stringSet'[m
+[01;31m        stringSet.insert(string("a"));[m
+[01;31m        ^[m
+[01;31mhashset-tests.cpp:40:26: error: use of undeclared identifier 'string'[m
+[01;31m        stringSet.insert(string("a"));[m
+[01;31m                         ^[m
+[01;31mhashset-tests.cpp:41:22: error: use of undeclared identifier 'stringSet'[m
+[01;31m        EXPECT_EQ(i, stringSet.size());[m
+[01;31m                     ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1849:33: note: expanded from macro 'EXPECT_EQ'[m
+[01;31m                      expected, actual)[m
+[01;31m                                ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:162:40: note: expanded from macro 'EXPECT_PRED_FORMAT2'[m
+[01;31m  GTEST_PRED_FORMAT2_(pred_format, v1, v2, GTEST_NONFATAL_FAILURE_)[m
+[01;31m                                       ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:147:43: note: expanded from macro 'GTEST_PRED_FORMAT2_'[m
+[01;31m  GTEST_ASSERT_(pred_format(#v1, #v2, v1, v2),\[m
+[01;31m                                          ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest_pred_impl.h:77:52: note: expanded from macro 'GTEST_ASSERT_'[m
+[01;31m  if (const ::testing::AssertionResult gtest_ar = (expression)) \[m
+[01;31m                                                   ^[m
+[01;31mIn file included from hashset-tests.cpp:11:[m
+[01;31mIn file included from ./hashset.hpp:121:[m
+[01;31m./hashset-private.hpp:99:18: error: no matching function for call to 'myhash'[m
+[01;31m    size_t key = myhash(x) % buckets_;[m
+[01;31m                 ^~~~~~[m
+[01;31mhashset-tests.cpp:27:28: note: in instantiation of member function 'HashSet<std::__1::basic_string<char> >::exists' requested here[m
+[01;31m    EXPECT_FALSE(stringSet.exists(testString));[m
+[01;31m                           ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/gtest.h:1787:25: note: expanded from macro 'EXPECT_FALSE'[m
+[01;31m  GTEST_TEST_BOOLEAN_(!(condition), #condition, true, false, \[m
+[01;31m                        ^[m
+[01;31m/cs/cs70/gtest-1.6.0/include/gtest/internal/gtest-internal.h:1179:34: note: expanded from macro 'GTEST_TEST_BOOLEAN_'[m
+[01;31m      ::testing::AssertionResult(expression)) \[m
+[01;31m                                 ^[m
+[01;31mhashset-tests.cpp:8:15: note: candidate function not viable: no known conversion from 'const std::__1::basic_string<char>' to 'int' for 1st argument; [m
+[01;31munsigned long myhash(int x);    // Predeclare before any includes[m
+[01;31m              ^[m
+[01;31mIn file included from hashset-tests.cpp:11:[m
+[01;31mIn file included from ./hashset.hpp:121:[m
+[01;31m./hashset-private.hpp:60:18: error: no matching function for call to 'myhash'[m
+[01;31m    size_t key = myhash(x) % buckets_;[m
+[01;31m                 ^~~~~~[m
+[01;31mhashset-tests.cpp:28:15: note: in instantiation of member function 'HashSet<std::__1::basic_string<char> >::insert' requested here[m
+[01;31m    stringSet.insert(testString);[m
+[01;31m              ^[m
+[01;31mhashset-tests.cpp:8:15: note: candidate function not viable: no known conversion from 'const std::__1::basic_string<char>' to 'int' for 1st argument; [m
+[01;31munsigned long myhash(int x);    // Predeclare before any includes[m
+[01;31m              ^[m
+[01;31m10 errors generated.[m
+[01;31mmake: *** [hashset-tests.o] Error 1[m

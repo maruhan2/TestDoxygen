@@ -1,0 +1,144 @@
+Authors: Kevin McSwiggen and Mars Park
+
+Tests:
+
+We first tested the option processing behaviour.  Following are terminal
+sessions:
+
+109 % ./myspell -d -t ispell.words
+height 15, size 34831, least element a, greatest element zoos, root value images
+
+110 % ./myspell -d -T ispell.words
+No statistics available.
+
+111 % ./myspell -d -h ispell.words
+16 expansions, load factor 0.265739, 13022 collisions, longest run 29
+
+112 % ./myspell -d -H ispell.words
+No statistics available.
+
+113 % ./myspell -d -k ispell.words
+Usage:  ./myspell [options] fileName
+Switches:
+    -d  Produce debugging outout.
+
+    -h  Construct dictionary using custom hashset implementation.
+
+    -H  Construct dictionary using STL hashset implementation.
+
+    -t  Construct dictionary using custom tree-set implementation.
+
+    -T  Construct dictionary using STL set implementation.
+
+    fileName is the location of the dictionary file to check against
+
+114 % ./myspell -d -t -H -h ispell.words
+No statistics available.
+
+115 % ./myspell -d ispell.words 
+16 expansions, load factor 0.265739, 13022 collisions, longest run 29
+
+116 % ./myspell -d             
+Expecting exactly one dictionary file!
+Usage:  ./myspell [options] fileName
+Switches:
+    -d  Produce debugging outout.
+
+    -h  Construct dictionary using custom hashset implementation.
+
+    -H  Construct dictionary using STL hashset implementation.
+
+    -t  Construct dictionary using custom tree-set implementation.
+
+    -T  Construct dictionary using STL set implementation.
+
+    fileName is the location of the dictionary file to check against
+
+117 % ./myspell -d ispell.words smalldict.words 
+Expecting exactly one dictionary file!
+Usage:  ./myspell [options] fileName
+Switches:
+    -d  Produce debugging outout.
+
+    -h  Construct dictionary using custom hashset implementation.
+
+    -H  Construct dictionary using STL hashset implementation.
+
+    -t  Construct dictionary using custom tree-set implementation.
+
+    -T  Construct dictionary using STL set implementation.
+
+    fileName is the location of the dictionary file to check against
+
+The program performs as desired, exiting gracefully with an explanation of usage
+when encountering unknown switches or non-single dictionary file.  When no
+switches are provided, the program uses -h by default, and in the case of more
+than one switch, prioritizes them in the order -H -h -T -t.
+
+
+For general tests we ran myspell with input from the command line. The following
+lines were entered individually into the Terminal (including descriptive lines):
+
+Testing a fully correct line of input
+one two three test
+Testing an empty line of input
+
+Testing word parsing
+abcd2 he11o "helo" 1heyo -baad woords- 13#%check^7&
+Testing repeated input
+Testing repeated input
+Testing repeated errors
+helo
+baad bald wrong words repeat repete heyo hi!
+Testing use of contractions (although they are not in the dictionary)
+I'm not, I don't, I can't, I won't, who're you to ask?
+Testing words using a variety of letters
+jackdaws love my big sphynx of quartz
+the quick brown fox jumped over the lazy dog
+^D
+
+Below follows the Terminal session with myspell.  The test was repeated for each
+of the -h, -H, -t, and -T flags with consistent output excepting debugging
+messages, as desired.
+
+108 % ./myspell -d -t ispell.words
+height 15, size 34831, least element a, greatest element zoos, root value images
+Testing a fully correct line of input
+one two three test
+Testing an empty line of input
+
+Testing word parsing
+abcd2 he11o "helo" 1heyo -baad woords- 13#%check^7&
+abcd: abed
+he11o:
+helo: hero held hell helm help
+heyo: hero
+baad: bead bald band bard baud
+woords:
+Testing repeated input
+Testing repeated input
+Testing repeated errors
+helo
+baad bald wrong words repeat repete heyo hi!
+repete: repute
+hi: pi ha he
+Testing use of contractions (although they are not in the dictionary)
+I'm not, I don't, I can't, I won't, who're you to ask?
+i'm:
+don't:
+can't:
+won't:
+who're:
+Testing words using a variety of letters                        
+jackdaws love my big sphynx of quartz
+jackdaws:
+sphynx:
+the quick brown fox jumped over the lazy dog
+
+The program performs as expected for the given input, and prints the desired
+debugging output.  We further tested the program's behaviour when reading input
+from three larger files, containing the King James Bible, the complete works of
+William Shakespeare, and Plato's Republic.  The program ran successfully and
+printed output apparently without repetition.  More details of the testing
+environment and the comparative results of running myspell on these three files
+can be found in performance.dox.

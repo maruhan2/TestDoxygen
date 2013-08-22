@@ -1,0 +1,15 @@
+K 13
+svn:eol-style
+V 6
+native
+K 12
+svn:keywords
+V 22
+URL Author Date Rev Id
+K 13
+svn:mergeinfo
+V 147
+/fall10/given/hw10/hashset-of-cow.cpp:16368,16388
+/spring11/given/hw10.pre/hashset-of-cow.cpp:20813
+/summer12/given/hw11/set-of-cow.cpp:33838-33925
+END

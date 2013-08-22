@@ -1,0 +1,23 @@
+stdhashset.hpp:
+  - Last line does not end with a newline
+stdtreeset.hpp:
+  - Last line does not end with a newline
+treeset-private.hpp, line 221:
+  - Is 94 characters long (> 80)
+treeset-private.hpp, line 232:
+  - Is 97 characters long (> 80)
+treeset.hpp:
+  - Last line does not end with a newline
+cs70-set-test.cpp:
+  - File uses TABs (expanding TABs to spaces is safer)
+hashset-tests.cpp:
+  - Last line does not end with a newline
+myspell.cpp, line 150:
+  - Contains utf8 characters, not plain ASCII (codes: 0x2019)
+      - 0x2019 = RIGHT SINGLE QUOTATION MARK
+myspell.cpp, line 212:
+  - Is 86 characters long (> 80)
+myspell.cpp, line 323:
+  - Is 99 characters long (> 80)
+stdhashset-tests.cpp:
+  - Last line does not end with a newline

@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 41
+*.o
+*.dSYM
+documentation
+myspell
+*-tests
+
+END

@@ -1,0 +1,9 @@
+--- /cs/grader/cs70grad/support/11/testcases/test2.out	2012-12-13 09:54:38.000000000 -0800
++++ test2.out	2012-12-14 18:02:42.000000000 -0800
+@@ -1,5 +1,5 @@
+ Testing TreeSet, size = 4096
+ Filling set...
+ Searching...
+-Final tree height okay!
++Final tree height too high (242).
+ Done (0 assertion failures).

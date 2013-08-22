@@ -1,0 +1,11 @@
+cs70-c++ -g  -Wall -Wextra -pedantic     -c -o treeset-tests.o treeset-tests.cpp
+cs70-c++ -g  -Wall -Wextra -pedantic   -o treeset-tests treeset-tests.o -lgtest -lgtest_main
+cs70-c++ -g  -Wall -Wextra -pedantic     -c -o hashset-tests.o hashset-tests.cpp
+cs70-c++ -g -Wall -Wextra -pedantic   -DUSE_HASHSET -c -o cs70-hashset-test.o cs70-set-test.cpp
+cs70-c++ -g -Wall -Wextra -pedantic   -o cs70-hashset-test cs70-hashset-test.o 
+cs70-c++ -g -Wall -Wextra -pedantic   -DUSE_TREESET -c -o cs70-treeset-test.o cs70-set-test.cpp
+cs70-c++ -g -Wall -Wextra -pedantic   -o cs70-treeset-test cs70-treeset-test.o 
+cs70-c++ -g -Wall -Wextra -pedantic   -DUSE_STDTREESET -c -o cs70-stdtreeset-test.o cs70-set-test.cpp
+cs70-c++ -g -Wall -Wextra -pedantic   -o cs70-stdtreeset-test cs70-stdtreeset-test.o 
+cs70-c++ -g -Wall -Wextra -pedantic   -DUSE_STDHASHSET -c -o cs70-stdhashset-test.o cs70-set-test.cpp
+cs70-c++ -g -Wall -Wextra -pedantic   -o cs70-stdhashset-test cs70-stdhashset-test.o 
