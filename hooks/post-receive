@@ -1,0 +1,19 @@
+#!/bin/sh
+unset GIT_WORK_TREE
+unset GIT_DIR
+unset GIT_INDEX_FILE
+
+GEN_DIR=~/deadswitch
+echo "Going to ${GEN_DIR}"
+cd "${GEN_DIR}"
+echo "Getting changes"
+git pull -f
+
+echo "Generating documentation"
+doxygen Doxyfile > /dev/null
+echo "Copying into website"
+rm -rf ~/bradjensen.net/public/docs/deadswitch/*
+cp -r doc/html/* ~/bradjensen.net/public/docs/deadswitch/
+
+echo "Cleaning up"
+rm -rf doc/*

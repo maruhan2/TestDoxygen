@@ -14,7 +14,7 @@
 
 /**
  * \class AbstractSet
- * \brief AbstractSet to be inherited.
+ * \brief AbstractSet to be inherited blah.
  *
  */
 template <typename T>
