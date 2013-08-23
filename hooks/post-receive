@@ -5,6 +5,8 @@ unset GIT_WORK_TREE
 unset GIT_DIR
 unset GIT_INDEX_FILE
 
+mkdir a
+
 GEN_DIR=~/TestDox
 echo "Going to ${GEN_DIR}"
 cd "${GEN_DIR}"
