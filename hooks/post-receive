@@ -10,4 +10,5 @@ echo "Getting changes"
 git pull -f
 
 echo "Generating documentation"
+cd hw11
 doxygen doxygen.config > /dev/null
