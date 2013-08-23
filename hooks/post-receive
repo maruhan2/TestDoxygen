@@ -9,9 +9,9 @@ GEN_DIR= ../
 mkdir a
 echo "Going to ${GEN_DIR}"
 cd "${GEN_DIR}"
+mkdir a
 echo "Getting changes"
 git pull -f
-mkdir a
 
 echo "Generating documentation"
 cd hw11
