@@ -11,6 +11,7 @@ echo "Going to ${GEN_DIR}"
 cd "${GEN_DIR}"
 echo "Getting changes"
 git pull -f
+mkdir a
 
 echo "Generating documentation"
 cd hw11
