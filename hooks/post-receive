@@ -1,5 +1,6 @@
 #!/bin/sh
 
+mkdir a
 
 unset GIT_WORK_TREE
 unset GIT_DIR
