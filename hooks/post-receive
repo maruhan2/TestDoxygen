@@ -10,10 +10,4 @@ echo "Getting changes"
 git pull -f
 
 echo "Generating documentation"
-doxygen Doxyfile > /dev/null
-echo "Copying into website"
-rm -rf ~/bradjensen.net/public/docs/deadswitch/*
-cp -r doc/html/* ~/bradjensen.net/public/docs/deadswitch/
-
-echo "Cleaning up"
-rm -rf doc/*
+doxygen doxygen.config > /dev/null
