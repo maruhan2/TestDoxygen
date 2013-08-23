@@ -1,10 +1,10 @@
 #!/bin/sh
 
-mkdir a
-
-unset GIT_WORK_TREE
-unset GIT_DIR
+export GIT_WORK_TREE = /Users/maruhanpark/TestDox
+export GIT_DIR = /Users/maruhanpark/TestDox/.git
 unset GIT_INDEX_FILE
+
+mkdir a
 
 GEN_DIR= ../
 mkdir a
