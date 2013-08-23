@@ -1,9 +1,11 @@
 #!/bin/sh
+
+
 unset GIT_WORK_TREE
 unset GIT_DIR
 unset GIT_INDEX_FILE
 
-GEN_DIR=~/deadswitch
+GEN_DIR=~/TestDox
 echo "Going to ${GEN_DIR}"
 cd "${GEN_DIR}"
 echo "Getting changes"
