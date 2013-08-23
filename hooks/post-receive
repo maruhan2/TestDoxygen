@@ -11,4 +11,5 @@ git pull -f
 
 echo "Generating documentation"
 cd hw11
+mkdir a
 doxygen doxygen.config > /dev/null
