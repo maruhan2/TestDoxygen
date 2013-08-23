@@ -1,3 +1,14 @@
 #!/bin/sh
 
 mkdir a
+
+unset GIT_WORK_TREE
+unset GIT_DIR
+unset GIT_INDEX_FILE
+
+GEN_DIR= ../
+mkdir a
+echo "Going to ${GEN_DIR}"
+cd "${GEN_DIR}"
+mkdir a
+echo "Getting changes"
